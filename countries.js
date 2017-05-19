@@ -1,10 +1,7 @@
 var countries = require("i18n-iso-countries");
 var fs = require('fs');
 
-
-console.log(countries.getName("US", "en"))
-
-var data = {
+const data = {
       "FRA": "FRA",
       "GBR": "GBR",
       "DEU": "DEU",
@@ -66,10 +63,13 @@ var data = {
       "ECU": "ECU"
     }
 
-for (var key in data) {
+Object.keys( data ).forEach( key => {
+	data[key] = countries.getName(key, "de")
+})
+
+/*for (var key in data) {
 	data[key] = countries.getName(key, "de")
 }
-
-console.log(data);
+*/
 
 fs.writeFile('./countries.json', JSON.stringify(data, null, 2) , 'utf-8')
