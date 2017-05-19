@@ -1,0 +1,23 @@
+{
+  "name": "countries_i18n",
+  "version": "1.0.0",
+  "description": "get country names and bounding boxes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "countries_i18n"
+  },
+  "keywords": [
+    "countries",
+    "iso3",
+    "geodata"
+  ],
+  "author": "Felix Michel",
+  "license": "MIT",
+  "dependencies": {
+    "i18n-iso-countries": "1.11.0"
+  }
+}
